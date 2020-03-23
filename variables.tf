@@ -95,6 +95,13 @@ variable "http_load_balancing" {
   description = "Enable httpload balancer addon"
   default     = true
 }
+   
+   
+variable "istio_gateway" {
+  type        = bool
+  description = "Enable istio addon"
+  default     = true
+}
 
 variable "network_policy" {
   type        = bool
