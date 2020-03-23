@@ -85,6 +85,10 @@ resource "google_container_cluster" "primary" {
     network_policy_config {
       disabled = ! var.network_policy
     }
+    
+    istio_config {
+      disabled = ! var.istio_gateway
+    }
   }
 
   ip_allocation_policy {
