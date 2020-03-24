@@ -102,6 +102,12 @@ variable "istio_gateway" {
   description = "Enable istio addon"
   default     = true
 }
+   
+variable "istio_gateway_auth" {
+  type        = string
+  description = "Auth setting to use for the istio addon"
+  default     = "MTLS_PERMISSIVE"
+}
 
 variable "network_policy" {
   type        = bool
