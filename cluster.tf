@@ -87,6 +87,7 @@ resource "google_container_cluster" "primary" {
     }
     
     istio_config {
+      auth     = var.istio_gateway_auth
       disabled = ! var.istio_gateway
     }
   }
